@@ -1,0 +1,28 @@
+{
+  "name": "commitment-decode",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "fmt": "prettier --write '{contracts,test}/**/*.{sol,js}'",
+    "lint": "solhint --fix contracts/**/*.sol",
+    "lint-js": "eslint --fix test/**/*.js",
+    "build": "truffle compile",
+    "deploy": "truffle migrate --reset",
+    "test": "truffle test --debug",
+    "test-decode": "truffle test --debug test/testDecode.test.js",
+    "debug": "truffle debug",
+    "all": "truffle compile; truffle migrate --reset"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.6.0",
+    "web3": "^1.7.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eth-gas-reporter": "^0.2.25",
+    "prettier": "^2.6.2",
+    "prettier-plugin-solidity": "^1.0.0-beta.19",
+    "solhint": "^3.3.7"
+  }
+}

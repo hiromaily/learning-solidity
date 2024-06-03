@@ -1,0 +1,30 @@
+{
+  "name": "janken",
+  "description": "janken contract",
+  "license": "MIT",
+  "version": "1.0.0",  
+  "scripts": {
+    "fmt": "prettier --write '{contracts,test}/**/*.{sol,js}'",
+    "lint": "solhint --fix contracts/**/*.sol",
+    "lint-js": "eslint --fix test/**/*.js",
+    "build": "truffle compile",
+    "deploy": "truffle migrate --reset",
+    "test-all": "truffle test --debug",
+    "test-janken": "truffle test --debug test/testJanken.test.js",
+    "test-token": "truffle test --debug test/testJankenToken.test.js",
+    "test-sp": "truffle test --debug test/testStakePool.test.js",
+    "test-ctl": "truffle test --debug test/testJankenController.test.js",
+    "debug": "truffle debug",
+    "all": "truffle compile; truffle migrate --reset"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.2.0",
+    "web3": "^1.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "prettier": "^2.3.2",
+    "prettier-plugin-solidity": "^1.0.0-beta.13",
+    "truffle": "^5.3.14"
+  }
+}
